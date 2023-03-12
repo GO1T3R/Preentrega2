@@ -1,15 +1,15 @@
 //declarar y asignararles un valor mediante un input
-let nombre = prompt("Ingrese el nombre del alumno: ");
+let nombre = prompt("Ingrese el Nombre del Alumno: ");
 
 // materias y califcaciones
-let m1 = prompt("Ingrese el nombre de la primera materia");
-let n1 = parseInt(prompt(`Ingrese la nota de la materia: ${m1}`));
+let m1 = prompt("Ingrese el Nombre de la Primera Materia: ");
+let n1 = parseInt(prompt(`Ingrese la Nota de la Materia: ${m1}`));
 
-let m2 = prompt("Ingrese el nombre de  la segunda materia");
-let n2 = parseInt(prompt(`Ingrese la nota de la materia: ${m2}`));
+let m2 = prompt("Ingrese el Nombre de la Segunda Materia: ");
+let n2 = parseInt(prompt(`Ingrese la Nota de la Materia: ${m2}`));
 
-let m3 = prompt("Ingrese el nombre de la tercera materia");
-let n3 = parseInt(prompt(`Ingrese la nota de la materia: ${m3}`));
+let m3 = prompt("Ingrese el Nombre de la Tercera Materia: ");
+let n3 = parseInt(prompt(`Ingrese la Nota de la Materia: ${m3}`));
 
 // Se almacena los datos en un array
 materiasCalificaciones = [
@@ -31,7 +31,12 @@ reprobadas = materiasCalificaciones.filter( promedio => promedio.calificacion < 
 //condicional si el alumno esta aprovado o reprobado    
 if(SacarPromedio() <= 10 && SacarPromedio() >= 7){
     alert("El alumno " + nombre + " ha aprovado con: " + SacarPromedio());
+    alert('Tus calificaciones: ')
+    materiasCalificaciones.forEach(function(objecto) {
+        alert(`sacaste ${objecto.calificacion} en la materia ${objecto.materia}`);
+    })
+    
 }else{
-    alert("has reprobado :(");
-    alert(`Las materias que has reprobado son: ${JSON.stringify(reprobadas)}`);
+    alert(`El alumno: ${nombre} ha reprobado`);
+    alert(`Las materias que has reprobado son:\n ${JSON.stringify(reprobadas)}`);
 }
