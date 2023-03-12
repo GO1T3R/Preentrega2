@@ -28,12 +28,12 @@ function SacarPromedio(){
 let reprobadas;
 reprobadas = materiasCalificaciones.filter( promedio => promedio.calificacion < 7);
 
-//condicional si el alumno esta aprovado o reprobado    
+//Condicional si el alumno esta aprovado o reprobado    
 if(SacarPromedio() <= 10 && SacarPromedio() >= 7){
-    alert("El alumno " + nombre + " ha aprovado con: " + SacarPromedio());
+    alert(`El Alumno ${nombre} ha aprovado con: ${SacarPromedio()}`);
     alert('Tus calificaciones: ')
     materiasCalificaciones.forEach(function(objecto) {
-        alert(`sacaste ${objecto.calificacion} en la materia ${objecto.materia}`);
+        alert(`Sacaste ${objecto.calificacion} en la materia ${objecto.materia}`);
     })
     
 }else{
